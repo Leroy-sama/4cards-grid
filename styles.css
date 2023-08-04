@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(0, 0%, 98%);
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+.top-content {
+    text-align: center;
+}
+
+.top-content p {
+    margin: 15px 0;
+}
+
+main {
+    padding: 20px;
+}
+
+main h1 {
+    font-weight: 400;
+}
+
+span {
+    font-size: 33px;
+    font-weight: 600;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        ". te ."
+        "su te ca"
+        "su ka ca"
+        ". ka ."
+    ;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.team-builder {
+    grid-area: te;
+    border-top: 4px solid hsl(0, 78%, 62%);
+}
+
+.supervisor {
+    grid-area: su;
+    border-top: 4px solid hsl(180, 62%, 55%);
+}
+
+.karma {
+    grid-area: ka;
+    border-top: 4px solid hsl(34, 97%, 64%);
+}
+
+.calculator {
+    grid-area: ca;
+    border-top: 4px solid hsl(212, 86%, 64%);
+}
+
+.container img {
+    display: block;
+    margin: 20px 0;
+    width: 50px;
+    align-self: end;
+}
+
+.supervisor p,
+.team-builder p,
+.karma p,
+.calculator {
+    font-size: 15px;
+    padding: 10px 0;
+}
+
+.team-builder,
+.supervisor,
+.karma,
+.calculator {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 450px) {
+
+    h1,
+    span {
+        font-size: 25px;
+    }
+
+    .top-content p {
+        width: 350px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-areas:
+            "su"
+            "su"
+            "te"
+            "te"
+            "ka"
+            "ka"
+            "ca"
+            "ca"
+        ;
+    }
+
+    .supervisor {
+        grid-area: su;
+    }
+
+    .team-builder {
+        grid-area: te;
+    }
+
+    .karma {
+        grid-area: ka;
+    }
+
+    .calculator {
+        grid-area: ca;
+    }
+}
